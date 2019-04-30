@@ -19,6 +19,6 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        'wallet','http://localhost:8000/paytm-callback'
+        'wallet','http://localhost:8000/paytm-callback','http://localhost:8000/instamojo/success'
     ];
 }

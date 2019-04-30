@@ -49,9 +49,9 @@ class WalletController extends Controller
 
 }
 
-$items = ["name" => "Harry Potter", "quantity" => 1, "unitPrice" => 50];
-$invoice = array("items" => $items, "totalAmount" => 1, "description" => "test", "callbackUrl" => "https://localhost:8000/status","returnUrl"=>"https://localhost:8000/return","cancellationUrl"=>"https://localhost:8000/cancel",
-  "merchantBusinessLogoUrl"=>"https://localhost:8000/wallet","merchantAccountNumber"=>"HM0409180006","clientReference"=>1234567890);.
+// $items = ["name" => "Harry Potter", "quantity" => 1, "unitPrice" => 50];
+// $invoice = array("items" => $items, "totalAmount" => 1, "description" => "test", "callbackUrl" => "https://localhost:8000/status","returnUrl"=>"https://localhost:8000/return","cancellationUrl"=>"https://localhost:8000/cancel",
+//   "merchantBusinessLogoUrl"=>"https://localhost:8000/wallet","merchantAccountNumber"=>"HM0409180006","clientReference"=>1234567890);
 
 
 /*

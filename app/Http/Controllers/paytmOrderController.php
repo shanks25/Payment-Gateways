@@ -364,7 +364,6 @@ class paytmOrderController extends Controller
         define('PAYTM_TXN_URL', $PAYTM_TXN_URL);
     }
     public function paytmCallback( Request $request ) {
-        return $request->all();
                 // Creating Array of Input Parameters
         $parameters = array(
             "ORDERID" => $request->ORDERID,

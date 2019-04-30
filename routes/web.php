@@ -11,7 +11,9 @@ Route::post('wallet2','WalletController2@index');
 //paytm ends here
 
 //payu
-Route::get('payu/checkout','PayuController@index');
+Route::get('instamojo/checkout','InstamojoController@create');
+Route::post('instamojo/checkout','InstamojoController@index')->name('instamojo');
+Route::get('instamojo/success','InstamojoController@success');
 
 
 
