@@ -8,9 +8,10 @@ use Exception;
 
 class WalletController extends Controller
 {
+ 
 	public function index(Request $request)
 	{
-   $name='Harray Paidal';
+    $name='Harray Paidal';
    $random=mt_rand(100000,999999);
    $invoice = "{\n  \"merchant_key\": \"tk_e36f5f54-61c0-11e9-865e-f23c9170642f\",\n  \"invoice_id\": \"123a456a\",\n  \"total\": 1,\n  \"pymt_instrument\": \"'0244560599'\",\n  \"extra_wallet_issuer_hint\": \"airtel\",\n  \"ipn_url\": \"https://localhost:8000/return\"}";
 

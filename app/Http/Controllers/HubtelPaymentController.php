@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Exception;
+  
 
-
-class WalletController extends Controller
+class HubtelPaymentController extends Controller
 {
 	public function index(Request $request)
 	{

@@ -20,7 +20,7 @@ class InstamojoController extends Controller
 				"purpose" => "FIFA 16",
 				"amount" => "100",
 				"send_email" => true,
-				"email" => "foo@example.com",
+				"email" => "kunal.rajput2511@gmail.com",
 				"redirect_url" => url('instamojo/success')
 			));
 			return $response;
