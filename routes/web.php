@@ -25,6 +25,8 @@ Route::get('report','DatewisereportController@index');
 Route::get('search','SearchController@index');
 Route::get('searchresults','SearchController@search');
 
+Route::get('user/{id}','SearchController@user');
+
 
 Route::group(['prefix' => 'admin'], function () {
 	Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');

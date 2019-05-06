@@ -19,6 +19,7 @@ class Smscontroller extends Controller
 		$from = urlencode('Jims Autos');
 		$message = rawurlencode('This is your message');
 		$id='Swiftwheels';
+
 		$url = "https://sms.dtechghana.com/api/v1/messages";
 		urlencode($url);
 

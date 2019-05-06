@@ -18,8 +18,13 @@ class SearchController extends Controller
 		$search= $request->search;
 		$users = User::where('name','like',"%$search%")
 					   ->orWhere('email','like',"%$search%")	
-		               ->get();
+		               ->paginate(10);
 		return	view('searchresults')->with('users',$users);
 	}
+  
+   public function user($id)
+   {
+   	 return User::find($id);
+   }
 
 }
