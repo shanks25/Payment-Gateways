@@ -21,7 +21,9 @@ Route::post('instamojo/checkout','InstamojoController@index')->name('instamojo')
 Route::get('instamojo/success','InstamojoController@success');
 
 //payu ends here
-
+Route::get('report','DatewisereportController@index');
+Route::get('search','SearchController@index');
+Route::get('searchresults','SearchController@search');
 
 
 Route::group(['prefix' => 'admin'], function () {

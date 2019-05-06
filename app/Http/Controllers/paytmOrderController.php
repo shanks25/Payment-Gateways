@@ -25,7 +25,7 @@ class paytmOrderController extends Controller
      */
     public function store(Request $request)
     {
-
+     
         $order_id = uniqid();
         $order = new Order();
         $order->order_id = $order_id;
