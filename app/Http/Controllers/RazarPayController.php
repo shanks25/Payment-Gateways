@@ -9,7 +9,7 @@ class RazarPayController extends Controller
 {
     public function index()
     {
-        return view('razorpay');
+        return view('razorpay.razorpay');
     }
     
     public function payment(Request $request)
@@ -48,7 +48,7 @@ class RazarPayController extends Controller
         ];
 
         $json = json_encode($data);
-        return view('razormanual',compact('json'));
+        return view('razorpay.razormanual',compact('json'));
     } 
     public function razorpayverify(Request $request)
     {
@@ -84,17 +84,12 @@ class RazarPayController extends Controller
     } 
     if ($success === true)
     {
-        $html = "<p>Your payment was successful</p>
-        <p>Payment ID: {$_POST['razorpay_payment_id']}</p>
- 
-        ";
-
+        return view('razorpay.success');
     }
     else
     {
-        $html = "<p>Your payment failed</p>
-        <p>{$error}</p>";
+         return view('razorpay.fail');
     } 
-    echo $html;
+   
 }
 }
