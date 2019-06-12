@@ -22,10 +22,16 @@ Route::get('instamojo/success','InstamojoController@success');
 
 //payu ends here
 Route::get('report','DatewisereportController@index');
+Route::get('report2','DatewisereportController@index');
 Route::get('search','SearchController@index');
 Route::get('searchresults','SearchController@search');
 
 Route::get('user/{id}','SearchController@user');
+
+Route::get('paywithrazorpay', 'RazarPayController@index')->name('paywithrazorpay');
+
+Route::post('razorpay', 'RazarPayController@payment')->name('razorpay');
+Route::post('razorpayverify', 'RazarPayController@razorpayverify')->name('razorpayverify');
 
 
 Route::group(['prefix' => 'admin'], function () {

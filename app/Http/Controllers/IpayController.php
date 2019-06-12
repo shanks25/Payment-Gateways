@@ -24,7 +24,7 @@ class IpayController extends Controller
 	{
 		$name='Harray Paidal';
 		$random=mt_rand(100000,999999);
-		$invoice = "{\n  \"merchant_key\": \"tk_e36f5f54-61c0-11e9-865e-f23c9170642f\",\n  \"invoice_id\": \"a789456\",\n  \"total\": 1,\n \"pymt_instrument\": \"'0244560599'\",\n  \"extra_wallet_issuer_hint\": \"airtel\",\n  \"ipn_url\": \"https://localhost:8000/ipay/callbackurl\"}";
+		$invoice = "{\n  \"merchant_key\": \"tk_e36f5f54-61c0-11e9-865e-f23c9170642f\",\n  \"invoice_id\": \"a4567\",\n  \"total\": 1,\n \"pymt_instrument\": \"'0260000000'\",\n  \"extra_wallet_issuer_hint\": \"airtel\",\n  \"ipn_url\": \"https://localhost:8000/ipay/callbackurl\"}";
 
 		$curl = curl_init();
 
@@ -57,6 +57,7 @@ class IpayController extends Controller
 	}
 	public function callbackurl()
 	{
+		return 'asfd';
 		$invoice= session()->get('invoice');
 		
 		$ch = curl_init('https://community.ipaygh.com/v1/gateway/json_status_chk?invoice_id='.$invoice.'&merchant_key=tk_e36f5f54-61c0-11e9-865e-f23c9170642f');
