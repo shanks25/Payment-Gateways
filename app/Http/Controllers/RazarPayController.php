@@ -11,6 +11,18 @@ class RazarPayController extends Controller
     {
         return view('razorpay.razorpay');
     }
+
+    <?php
+$d=strtotime("tomorrow");
+echo date("Y-m-d h:i:sa", $d) . "<br>"; // this shit will actually work and
+                                        // return tomoroows date time                 
+
+$d=strtotime("next Saturday");
+echo date("Y-m-d h:i:sa", $d) . "<br>";
+
+$d=strtotime("+3 Months");
+echo date("Y-m-d h:i:sa", $d) . "<br>";
+?>
     
     public function payment(Request $request)
     {
@@ -76,8 +88,7 @@ class RazarPayController extends Controller
 
         }
         catch(SignatureVerificationError $e)
-        {
-
+        { 
             $success = false;
             $error = 'Razorpay Error : ' . $e->getMessage();
         }
