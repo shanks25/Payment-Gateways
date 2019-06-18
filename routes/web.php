@@ -7,6 +7,7 @@ Route::get('/guzzleplay','SmsfreshController@guzzleplay');
 
 
 Route::post('/textlocal','TextlocalController@index');
+Route::get('/msg91','Msg91Controller@index');
 Route::get('/','Smscontroller@create');
 Route::get('return','WalletController@return');
 //Hubtel

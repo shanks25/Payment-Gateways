@@ -12,17 +12,7 @@ class RazarPayController extends Controller
         return view('razorpay.razorpay');
     }
 
-    <?php
-$d=strtotime("tomorrow");
-echo date("Y-m-d h:i:sa", $d) . "<br>"; // this shit will actually work and
-                                        // return tomoroows date time                 
-
-$d=strtotime("next Saturday");
-echo date("Y-m-d h:i:sa", $d) . "<br>";
-
-$d=strtotime("+3 Months");
-echo date("Y-m-d h:i:sa", $d) . "<br>";
-?>
+ 
     
     public function payment(Request $request)
     {
@@ -38,7 +28,7 @@ echo date("Y-m-d h:i:sa", $d) . "<br>";
         $razorpayOrderId = $razorpayOrder['id'];
         session()->put('invoice',$razorpayOrderId); 
         $amount = $orderData['amount'];
-        $data = [
+     $data = [
             "key"               => 'rzp_test_Gur3vzkmY22mZj',
             "amount"            => $amount,
             "name"              =>  $request->item_name,
