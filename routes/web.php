@@ -52,3 +52,6 @@ Route::post('razorpayverify', 'RazarPayController@razorpayverify')->name('razorp
 }); 
 Auth::routes(); 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/paystack', 'PaystackController@redirectToGateway')->name('paystack'); 
+Route::get('/paystack/callback', 'PaystackController@handleGatewayCallback');
+Route::get('/paystack', 'PaystackController@showform');
